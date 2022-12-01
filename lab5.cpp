@@ -1,0 +1,45 @@
+﻿#include "Header.h"
+int main()
+{
+    Movie firstMovie(14109724, "Ticket to Paradise", "6.2 / 10", 2022, 74, 170, "Adventure, Comedy, Romance");
+    firstMovie.Print();
+    Cinema firstFilm("Respublika Park IMAX, Ring road 1, Kyiv");
+    firstFilm.Print();
+    firstMovie.calculateProfit();
+    cout << "__________________________________________________________________" << endl;
+    Movie secondMovie(11083552, "Wrath of Man", "7.1 / 10", 2021, 88, 210, "Crime, Action, Thriller");
+    secondMovie.Print();
+    Cinema secondFilm("Komod, St.Sheptytskyi, 4A, Kyiv");
+    secondFilm.Print();
+    secondMovie.calculateProfit();
+    cout << "__________________________________________________________________" << endl;
+    Movie thirdMovie(7504726, "The Call of the Wild", "6.7 / 10", 2020, 59, 190, "Adventure, Family");
+    thirdMovie.Print();
+    Cinema thirdFilm("Retroville ScreenX, Pravdy Avenue, 47, Kyiv");
+    thirdFilm.Print();
+    thirdMovie.calculateProfit();
+    cout << "__________________________________________________________________" << endl;
+    Movie fourthMovie(6472976, "Five Feet Apart", "7.2 / 10", 2019, 102, 180, "Drama, Melodrama");
+    fourthMovie.Print();
+    Cinema fourthFilm("Victoria Gardens, St.Kulparkivska, 226 A, Lviv");
+    fourthFilm.Print();
+    fourthMovie.calculateProfit();
+    cout << "__________________________________________________________________" << endl;
+    Movie fifthMovie(1270797, "Venom", "6.6 / 10", 2018, 135, 220, "Fantasy, Action, Thriller");
+    fifthMovie.Print();
+    Cinema fifthFilm("Spartak, St.Hetman Mazepa, 1B, Lviv");
+    fifthFilm.Print();
+    fifthMovie.calculateProfit();
+    cout << "__________________________________________________________________" << endl;
+    Cinema Sorted;
+    Sorted.MovieAdd(firstMovie);
+    Sorted.MovieAdd(secondMovie);
+    Sorted.MovieAdd(thirdMovie);
+    Sorted.MovieAdd(fourthMovie);
+    Sorted.MovieAdd(fifthMovie);
+    cout << "\n------------------- Sorted by year --------------------------------" << endl;
+    Sorted.SortByYear();
+    cout << "\n------------------- The highest ranking ---------------------------" << endl;
+    Sorted.TheHighestRanking();
+    return 0;
+};
