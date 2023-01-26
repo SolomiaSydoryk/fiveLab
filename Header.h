@@ -10,31 +10,31 @@ public:
     string ranking;
     int release_date;
     int number_of_tickets;
-    int ticket_price_in_uan;
+    int price_of_ticket;
     string comment;
-    int GetID(){
+    int get_id(){
         return id;
     }
-    string GetTITLE(){
+    string get_title(){
         return title;
     }
-    string GetRANKING(){
+    string get_ranking(){
         return ranking;
     }
-    int GetRELEASE_DATE(){
+    int get_release_date(){
         return release_date;
     }
-    int GetNUMBER_OF_TICKETS(){
+    int get_number_of_tickets(){
         return number_of_tickets;
     }
-    int GetTICKET_PRICE_IN_UAN(){
-        return ticket_price_in_uan;
+    int get_price_of_ticket(){
+        return price_of_ticket;
     }
-    string GetCOMMENT(){
+    string get_comment(){
         return comment;
     };
     Movie() {};
-    enum filmType
+    enum FilmType
     {
         ACTION,
         ADVENTURE,
@@ -50,21 +50,14 @@ public:
         ROMANCE,
         THRILLER
     };
-    void calculateProfit()
-    {
-        int a = number_of_tickets;
-        int b = ticket_price_in_uan;
-        int c = a * b;
-        cout << "Calculation of profit for a certain day (UAN) : " << c << endl;
-    };
-    Movie(int id, string title, string ranking, int release_date, int  number_of_tickets, int ticket_price_in_uan, string comment)
+    Movie(int id, string title, string ranking, int release_date, int  number_of_tickets, int price_of_ticket, string comment)
     {
         this->id = id;
         this->title = title;
         this->ranking = ranking;
         this->release_date = release_date;
         this->number_of_tickets = number_of_tickets;
-        this->ticket_price_in_uan = ticket_price_in_uan;
+        this->price_of_ticket = price_of_ticket;
         this->comment = comment;
     }
     void Print()
@@ -74,9 +67,16 @@ public:
         cout << "Ranking:\t" << ranking << endl;
         cout << "Release date:\t" << release_date << endl;
         cout << "Number of tickets:\t" << number_of_tickets << endl;
-        cout << "Ticket price (UAN):\t" << ticket_price_in_uan << endl;
+        cout << "Ticket price (UAN):\t" << price_of_ticket << endl;
         cout << "Comment:\t" << comment << endl;
     }
+    void CalculateProfit()
+    {
+        int number = number_of_tickets;
+        int price = price_of_ticket;
+        int calculationofprofit = number * price;
+        cout << "Calculation of profit for a certain day (UAN) : " << calculationofprofit << endl;
+    };
     ~Movie()
     {
 
@@ -86,7 +86,7 @@ class Cinema
 {
 public:
     string location;
-    string GetLOCATION()
+    string get_location()
     {
         return location;
     }
@@ -95,7 +95,7 @@ public:
     {
         this->location = location;
     }
-    void Print()
+    void Print2()
     {
         cout << "Location:\t" << location << endl;
     }
@@ -126,7 +126,7 @@ public:
         {
             arr[n].Print();
         }
-    };
+    }
     void TheHighestRanking()
     {
         for (int i = 0; i < numberelements; i++)
@@ -142,5 +142,5 @@ public:
             }
         }
         arr[0].Print();
-    };
+    }
 };
