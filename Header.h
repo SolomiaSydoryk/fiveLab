@@ -36,19 +36,19 @@ public:
     Movie() {};
     enum FilmType
     {
-        ACTION,
-        ADVENTURE,
-        COMEDY,
-        CRIME,
-        CRIMINAL,
-        DETECTIVE,
-        DRAMA,
-        FAMILY,
-        FANTASY,
-        HORRORS,
-        MELODRAMA,
-        ROMANCE,
-        THRILLER
+        kAction,
+        kAdventure,
+        kComedy,
+        kCrime,
+        kCriminal,
+        kDetective,
+        kDrama,
+        kFamily,
+        kFantasy,
+        kHorrors,
+        kMelodrama,
+        kRomance,
+        kThriller
     };
     Movie(int id, string title, string ranking, int release_date, int  number_of_tickets, int price_of_ticket, string comment)
     {
